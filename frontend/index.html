@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Parser</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div class="logo">
+                AI Resume Parser
+            </div>
+
+            <p>
+                Extract important information from your resume using AI and NLP
+            </p>
+
+        </header>
+
+
+        <!-- UPLOAD SECTION -->
+
+        <section class="upload-card">
+
+            <h2>Upload Your Resume</h2>
+
+            <p class="subtitle">
+                Upload your resume in PDF format
+            </p>
+
+
+            <div class="upload-area" id="uploadArea">
+
+                <div class="upload-icon">
+                    📄
+                </div>
+
+                <h3>
+                    Drag & Drop your resume here
+                </h3>
+
+                <p>
+                    or
+                </p>
+
+                <label for="resumeFile" class="choose-btn">
+                    Choose PDF
+                </label>
+
+                <input
+                    type="file"
+                    id="resumeFile"
+                    accept=".pdf"
+                    hidden
+                >
+
+                <p id="fileName" class="file-name">
+                    No file selected
+                </p>
+
+            </div>
+
+
+            <button
+                id="parseBtn"
+                class="parse-btn"
+            >
+                Parse Resume
+            </button>
+
+
+            <!-- LOADING -->
+
+            <div
+                id="loading"
+                class="loading hidden"
+            >
+                <div class="spinner"></div>
+
+                <p>
+                    Analyzing your resume...
+                </p>
+            </div>
+
+
+            <!-- ERROR -->
+
+            <div
+                id="errorMessage"
+                class="error hidden"
+            >
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+
+        <section
+            id="results"
+            class="results hidden"
+        >
+
+            <h2>
+                Parsed Resume
+            </h2>
+
+
+            <!-- BASIC INFORMATION -->
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <span class="icon">
+                        👤
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            Name
+                        </h4>
+
+                        <p id="name">
+                            -
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="icon">
+                        📧
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            Email
+                        </h4>
+
+                        <p id="email">
+                            -
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="icon">
+                        📱
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            Phone
+                        </h4>
+
+                        <p id="phone">
+                            -
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SKILLS -->
+
+            <div class="result-card">
+
+                <h3>
+                    🛠 Skills
+                </h3>
+
+                <div
+                    id="skills"
+                    class="skills-container"
+                >
+                    <span class="empty">
+                        No skills detected
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- EDUCATION -->
+
+            <div class="result-card">
+
+                <h3>
+                    🎓 Education
+                </h3>
+
+                <ul id="education">
+                </ul>
+
+            </div>
+
+
+            <!-- EXPERIENCE -->
+
+            <div class="result-card">
+
+                <h3>
+                    💼 Experience
+                </h3>
+
+                <ul id="experience">
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                AI Resume Parser • NLP & OCR Based Resume Analysis
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

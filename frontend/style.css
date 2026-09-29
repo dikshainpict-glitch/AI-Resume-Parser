@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f8fafc
+        );
+
+    min-height: 100vh;
+
+    color: #1e293b;
+}
+
+
+.container {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 40px 0;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.logo {
+
+    font-size: 36px;
+
+    font-weight: 700;
+
+    color: #4f46e5;
+
+    margin-bottom: 10px;
+}
+
+
+.header p {
+
+    color: #64748b;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   UPLOAD CARD
+========================= */
+
+.upload-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+
+.upload-card h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+
+    color: #64748b;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   UPLOAD AREA
+========================= */
+
+.upload-area {
+
+    border: 2px dashed #a5b4fc;
+
+    border-radius: 15px;
+
+    padding: 40px 20px;
+
+    background: #f8faff;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+
+.upload-area:hover {
+
+    border-color: #4f46e5;
+
+    background: #eef2ff;
+}
+
+
+.upload-icon {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+
+.upload-area h3 {
+
+    margin-bottom: 8px;
+}
+
+
+.upload-area p {
+
+    color: #64748b;
+
+    margin: 8px 0;
+}
+
+
+.choose-btn {
+
+    display: inline-block;
+
+    background: #4f46e5;
+
+    color: white;
+
+    padding: 11px 22px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    margin: 8px 0;
+}
+
+
+.choose-btn:hover {
+
+    background: #4338ca;
+}
+
+
+.file-name {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #334155 !important;
+}
+
+
+/* =========================
+   PARSE BUTTON
+========================= */
+
+.parse-btn {
+
+    margin-top: 25px;
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.parse-btn:hover {
+
+    background: #4338ca;
+
+    transform: translateY(-1px);
+}
+
+
+.parse-btn:disabled {
+
+    background: #94a3b8;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.loading {
+
+    margin-top: 20px;
+
+    color: #4f46e5;
+
+    font-weight: 600;
+}
+
+
+.spinner {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: 4px solid #e0e7ff;
+
+    border-top: 4px solid #4f46e5;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+
+    margin: auto auto 10px;
+}
+
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.error {
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    background: #fee2e2;
+
+    color: #b91c1c;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   RESULTS
+========================= */
+
+.results {
+
+    margin-top: 35px;
+}
+
+
+.results > h2 {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    font-size: 28px;
+}
+
+
+/* =========================
+   BASIC INFORMATION
+========================= */
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+.info-card {
+
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+.icon {
+
+    font-size: 30px;
+}
+
+
+.info-card h4 {
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.info-card p {
+
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   RESULT CARDS
+========================= */
+
+.result-card {
+
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+.result-card h3 {
+
+    margin-bottom: 18px;
+
+    color: #334155;
+}
+
+
+.result-card ul {
+
+    padding-left: 20px;
+}
+
+
+.result-card li {
+
+    margin-bottom: 8px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.skill {
+
+    background: #eef2ff;
+
+    color: #4338ca;
+
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.empty {
+
+    color: #94a3b8;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 35px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   UTILITY
+========================= */
+
+.hidden {
+
+    display: none;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .info-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .logo {
+
+        font-size: 28px;
+
+    }
+
+    .upload-card {
+
+        padding: 25px 18px;
+
+    }
+
+}
